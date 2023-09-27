@@ -4,3 +4,6 @@
     object-fit: cover;
     
 }
+.card-header{
+    font-size: 20pt;
+}
