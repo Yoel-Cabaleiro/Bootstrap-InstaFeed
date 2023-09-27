@@ -33,34 +33,58 @@
                 <i class="fa-brands fa-instagram"></i>
                 <span>Instagram</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav align-items-center">
                     <li class="nav-item active">    
-                        <a class="nav-link" href="#">    
-                            <span class="btn btn-success">    
+                            
+                        <span class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">    
                                 Create a new post    
-                            </span>    
-                        </a>    
+                        </span>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Create a new post</b></h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <label for="message-text" class="col-form-label">Caption:</label>
+                                    <textarea class="form-control mb-1" id="message-text"></textarea>
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-camera" style="color: #000000;"></i></button>
+                                    <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot" style="color: #000000;"></i></button>
+                        
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-success">Publish</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                              
+                           
                     </li>    
                     <li class="nav-item dropdown">    
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"    
+                        <a class="dropdown-toggle btn btn-secondary ms-1 my-1" href="#" id="navbarDropdownMenuLink"    
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">    
-                            Menu
+                            <i class="fa-solid fa-gear" style="color: #ffffff;"></i>
                         </a>    
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">    
                             <a class="dropdown-item" href="#">Profile</a>    
                             <a class="dropdown-item" href="#">Accesibility</a>    
                             <a class="dropdown-item" href="#">Privacy and Data</a>
+                            <a class="dropdown-item text-danger border-top">Log out</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     
     <div class="row justify-content-center m-3">
         <div class="col-1"><a href="#" id="grid">grid</a></div>
@@ -88,7 +112,7 @@
         </div>
         <div class="container" id="cardDetails">
             <div class="row justify-content-center">
-                <div class="card col-sm-12 col-md-8 col-lg-5">
+                <div class="card col-sm-12 col-md-8 col-lg-5 p-0">
                     <div class="card-header bg-transparent border-success">
                         Mi perro
                     </div>
